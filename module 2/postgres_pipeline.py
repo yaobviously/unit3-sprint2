@@ -17,8 +17,8 @@ SQLITE_DB = r'C:\Users\yaobv\Lambda Unit 3 Sprint 2\Databases\data\rpg_db.sqlite
 
 def create_connections(dbname, user, host, password, sqldb = SQLITE_DB):
     """ creates a connection to remote Postgres and local SQLite """
-    pg_conn = pg2.connect(dbname = DBNAME, user = USER,
-                          host = HOST, password = PASSWORD)
+    pg_conn = pg2.connect(dbname = dbname, user = user,
+                          host = host, password = password)
     sql_conn = sqlite3.connect(sqldb)
     
     return pg_conn, sql_conn

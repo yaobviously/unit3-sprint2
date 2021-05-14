@@ -49,3 +49,17 @@ EXTRACT_chars = """
     SELECT *
     FROM charactercreator_character;
 """
+
+EXTRACT_armory_table = """
+    SELECT *
+    FROM armory_item;
+"""
+
+CREATE_armory_table = """
+    CREATE TABLE IF NOT EXISTS armory_table (
+        item_id SERIAL PRIMARY KEY,
+        name VARCHAR(30) NOT NULL,
+        val INT NOT NULL,
+        weight INT NOT NULL
+        );
+"""
